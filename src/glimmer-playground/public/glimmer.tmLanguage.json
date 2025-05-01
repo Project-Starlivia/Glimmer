@@ -1,0 +1,20 @@
+{
+    "name": "glimmer",
+    "fileTypes": ["glim"],
+    "scopeName": "source.glimmer",
+    "patterns": [
+      {
+        "name": "keyword.control.glimmer",
+        "match": "\\b(const|let|stack|manual|utf8|js)\\b"
+      },
+      {
+        "name": "variable.glimmer",
+        "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+      },
+      {
+        "name": "constant.numeric.glimmer",
+        "match": "\\b\\d+(\\.\\d+)?\\b"
+      }
+    ]
+  }
+  

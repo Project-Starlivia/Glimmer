@@ -1,10 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head><meta charset="UTF-8"><title>Glimmer Playground</title></head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Glimmer Playground</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
   <body>
-    <textarea id="input" rows="10" cols="60">// write glimmer code here</textarea><br />
-    <button id="run">Compile to .wat</button>
-    <pre id="output"></pre>
+    <div id="editor"></div>
+    <pre id="output"><code class="language-wasm"></code></pre>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
