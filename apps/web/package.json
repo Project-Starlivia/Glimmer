@@ -21,7 +21,8 @@
     "prismjs": "^1.30.0",
     "vscode-oniguruma": "1.6.2",
     "vscode-textmate": "^9.2.0",
+    "@glimmer/tmlanguage": "workspace:*",
     "@glimmer/ast": "workspace:*",
-    "@glimmer/wat-parseAstr": "workspace:*"
+    "@glimmer/wat-parser": "workspace:*"
   }
 }

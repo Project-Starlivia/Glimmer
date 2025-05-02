@@ -12,7 +12,8 @@
       "version": "0.0.0",
       "dependencies": {
         "@glimmer/ast": "workspace:*",
-        "@glimmer/wat-parseAstr": "workspace:*",
+        "@glimmer/tmlanguage": "workspace:*",
+        "@glimmer/wat-parser": "workspace:*",
         "monaco-editor": "^0.52.2",
         "monaco-editor-textmate": "^4.0.0",
         "monaco-textmate": "^3.0.1",
@@ -29,9 +30,18 @@
     },
     "packages/ast": {
       "name": "@glimmer/ast",
+      "dependencies": {
+        "@glimmer/ast": "workspace:*",
+      },
     },
-    "packages/wat-parseAstr": {
-      "name": "@glimmer/wat-parseAstr",
+    "packages/tmlanguage": {
+      "name": "@glimmer/tmlanguage",
+    },
+    "packages/wat-parser": {
+      "name": "@glimmer/wat-parser",
+      "dependencies": {
+        "@glimmer/ast": "workspace:*",
+      },
     },
   },
   "packages": {
@@ -87,7 +97,9 @@
 
     "@glimmer/ast": ["@glimmer/ast@workspace:packages/ast"],
 
-    "@glimmer/wat-parseAstr": ["@glimmer/wat-parseAstr@workspace:packages/wat-parseAstr"],
+    "@glimmer/tmlanguage": ["@glimmer/tmlanguage@workspace:packages/tmlanguage"],
+
+    "@glimmer/wat-parser": ["@glimmer/wat-parser@workspace:packages/wat-parser"],
 
     "@glimmer/web": ["@glimmer/web@workspace:apps/web"],
 

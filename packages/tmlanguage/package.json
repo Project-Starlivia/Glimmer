@@ -1,0 +1,8 @@
+{
+    "name": "@glimmer/tmlanguage",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./index.ts"
+    }
+}

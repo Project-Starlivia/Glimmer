@@ -1,22 +1,17 @@
 import * as monaco from "monaco-editor";
 import { parseAst } from "@glimmer/ast";
 import { generateWAT } from "@glimmer/wat-parser";
+import grammar from "@glimmer/tmlanguage";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css"; // ダークテーマ
 import "prismjs/components/prism-wasm.js";  // WAT用ハイライト追加
 
-async function loadGlimmerLanguage() {
-  const response = await fetch("/glimmer.tmLanguage.json");
-  if (!response.ok) {
-    throw new Error("Failed to load glimmer.tmLanguage.json");
-  }
-  const tmLanguage = await response.json();
-
+function loadGlimmerLanguage() {
   monaco.languages.register({ id: "glimmer" });
 
   monaco.languages.setMonarchTokensProvider("glimmer", {
     tokenizer: {
-      root: tmLanguage.patterns.map((pattern: { match: string; name: string }) => [
+      root: grammar.patterns.map((pattern: { match: string; name: string }) => [
         new RegExp(pattern.match),
         pattern.name,
       ]),
