@@ -17,7 +17,7 @@ export function parseAst(input: string): ASTNode[] {
         ast.push({
             type: 'VariableDeclaration',
             name,
-            value: Number.parseAstFloat(value)
+            value: Number.parseFloat(value)
         });
         }
     }
