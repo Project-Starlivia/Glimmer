@@ -1,5 +1,11 @@
 {
   "name": "@glimmer/ast",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },  
+  "dependencies": {
+    "@glimmer/ast": "workspace:*"
+  }
 }

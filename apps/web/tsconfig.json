@@ -20,5 +20,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "../../packages/ast/generator.ts", "../../packages/ast/parser.ts"]
+  "include": ["src"]
 }

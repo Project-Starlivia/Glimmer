@@ -1,9 +1,11 @@
 {
-  "name": "@glimmer/wat-parser",
+  "name": "@glimmer/wat-parseAstr",
   "private": true,
   "type": "module",
 	"exports": {
-		"./parser": "./src/parser.ts",
-		"./generator": "./src/generator.ts"
-	}
+		".": "./src/index.ts"
+	},
+  "dependencies": {
+    "@glimmer/ast": "workspace:*"
+  }
 }

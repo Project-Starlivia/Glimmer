@@ -1,4 +1,4 @@
-import type { ASTNode, VariableDeclaration } from "./parser";
+import type { ASTNode, VariableDeclaration } from "@glimmer/ast";
 
 export function generateWAT(ast: ASTNode[]): string {
   const localDecls: string[] = [];

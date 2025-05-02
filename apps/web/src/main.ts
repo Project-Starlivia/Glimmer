@@ -1,6 +1,6 @@
 import * as monaco from "monaco-editor";
-import { parse } from "@glimmer/wat-parser/parser";
-import { generateWAT } from "@glimmer/wat-parser/generator";
+import { parseAst } from "@glimmer/ast";
+import { generateWAT } from "@glimmer/wat-parseAstr";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css"; // ダークテーマ
 import "prismjs/components/prism-wasm.js";  // WAT用ハイライト追加
@@ -34,7 +34,7 @@ function updateWat() {
     throw new Error("Editor not initialized");
   }
   const code = editor.getValue();
-  const ast = parse(code);
+  const ast = parseAst(code);
   const wat = generateWAT(ast);
   codeBlock.textContent = wat;
   Prism.highlightElement(codeBlock as HTMLElement);

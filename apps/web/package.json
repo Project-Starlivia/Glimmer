@@ -22,6 +22,6 @@
     "vscode-oniguruma": "1.6.2",
     "vscode-textmate": "^9.2.0",
     "@glimmer/ast": "workspace:*",
-    "@glimmer/wat-parser": "workspace:*"
+    "@glimmer/wat-parseAstr": "workspace:*"
   }
 }

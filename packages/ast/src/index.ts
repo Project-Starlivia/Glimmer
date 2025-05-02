@@ -6,7 +6,7 @@ export interface VariableDeclaration {
   
 export type ASTNode = VariableDeclaration;
 
-export function parse(input: string): ASTNode[] {
+export function parseAst(input: string): ASTNode[] {
     const lines = input.split(';').map(line => line.trim()).filter(Boolean);
     const ast: ASTNode[] = [];
 
@@ -17,7 +17,7 @@ export function parse(input: string): ASTNode[] {
         ast.push({
             type: 'VariableDeclaration',
             name,
-            value: Number.parseFloat(value)
+            value: Number.parseAstFloat(value)
         });
         }
     }
