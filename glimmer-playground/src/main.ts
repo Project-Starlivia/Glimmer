@@ -24,6 +24,24 @@ async function loadGlimmerLanguage() {
   });
 }
 
+
+const codeBlock = document.getElementById("output");
+function updateWat() {
+  if (!codeBlock) {
+    throw new Error("Code block not found");
+  }
+  if(!editor) {
+    throw new Error("Editor not initialized");
+  }
+  const code = editor.getValue();
+  const ast = parse(code);
+  const wat = generateWAT(ast);
+  codeBlock.textContent = wat;
+  Prism.highlightElement(codeBlock as HTMLElement);
+}
+
+let editor: monaco.editor.IStandaloneCodeEditor | null = null
+
 async function initializeEditor() {
   await loadGlimmerLanguage();
 
@@ -33,7 +51,7 @@ async function initializeEditor() {
     throw new Error("Editor element not found");
   }
 
-  const editor = monaco.editor.create(editorElem, {
+  editor = monaco.editor.create(editorElem, {
     value: "const a = 10;",
     language: "glimmer",
     theme: "vs-dark",
@@ -41,18 +59,15 @@ async function initializeEditor() {
     minimap: { enabled: false },
   });
 
-  const codeBlock = document.getElementById("output");
-  if (!codeBlock) {
-    throw new Error("Code block not found");
-
-  }
-  
-  const code = editor.getValue();
-  const ast = parse(code);
-  const wat = generateWAT(ast);
-  codeBlock.textContent = wat;
-  Prism.highlightElement(codeBlock as HTMLElement);
+  updateWat();
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.key === "s") {
+    event.preventDefault(); // Prevent the default browser save action
+    updateWat();
+  }
+});
 
 initializeEditor().catch((error) => {
   console.error("Failed to initialize editor:", error);
