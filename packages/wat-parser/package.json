@@ -1,5 +1,5 @@
 {
-  "name": "@glimmer/wat-parseAstr",
+  "name": "@glimmer/wat-parser",
   "private": true,
   "type": "module",
 	"exports": {
