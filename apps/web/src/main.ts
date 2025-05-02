@@ -1,6 +1,6 @@
 import * as monaco from "monaco-editor";
-import { parse } from "./parser";
-import { generateWAT } from "./generator";
+import { parse } from "@glimmer/wat-parser/parser";
+import { generateWAT } from "@glimmer/wat-parser/generator";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css"; // ダークテーマ
 import "prismjs/components/prism-wasm.js";  // WAT用ハイライト追加

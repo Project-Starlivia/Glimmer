@@ -1,0 +1,12 @@
+{
+    "name": "Glimmer",
+    "private": true,
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "devDependencies": {
+      "typescript": "~5.7.2"
+    }
+}

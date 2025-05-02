@@ -1,0 +1,5 @@
+{
+  "name": "@glimmer/ast",
+  "private": true,
+  "type": "module"
+}

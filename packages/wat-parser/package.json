@@ -1,0 +1,9 @@
+{
+  "name": "@glimmer/wat-parser",
+  "private": true,
+  "type": "module",
+	"exports": {
+		"./parser": "./src/parser.ts",
+		"./generator": "./src/generator.ts"
+	}
+}

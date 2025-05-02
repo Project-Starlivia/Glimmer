@@ -1,5 +1,5 @@
 {
-  "name": "glimmer-playground",
+  "name": "@glimmer/web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.5",
-    "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vite-plugin-full-reload": "^1.2.0"
   },
@@ -21,6 +20,8 @@
     "onigasm": "^2.2.5",
     "prismjs": "^1.30.0",
     "vscode-oniguruma": "1.6.2",
-    "vscode-textmate": "^9.2.0"
+    "vscode-textmate": "^9.2.0",
+    "@glimmer/ast": "workspace:*",
+    "@glimmer/wat-parser": "workspace:*"
   }
 }
